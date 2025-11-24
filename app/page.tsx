@@ -1,6 +1,7 @@
 "use client";
 
 import { ContactForm } from "@/components/form";
+import Header from "@/components/header";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
@@ -39,22 +40,21 @@ export default function Home() {
   return (
     <div className="font-sans text-gray-800">
       {/* Header Section */}
-      <header className="sticky top-0 z-50 bg-white ">
+      <Header scrollToSection={scrollToSection} />
+      {/* <header className="sticky top-0 z-50 bg-white ">
         <div className="flex justify-between items-center py-4 px-8 bg-white max-w-7xl mx-auto">
           <div className="flex items-center gap-2">
             <img src="/3d-printing-ncr/excel-logo.webp" alt="Excel Rapidtech Logo" className="h-15" />
-            {/* <span className="font-bold text-xl text-gray-800">Excel Rapidtech</span> */}
           </div>
           <nav className="hidden md:flex gap-6 text-gray-700 font-medium">
             <button onClick={() => scrollToSection("services")} className="hover:text-orange-500">Services</button>
             <button onClick={() => scrollToSection("industries")} className="hover:text-orange-500">Industries</button>
-            {/* <a href="#clients" className="hover:text-orange-500">Clients</a> */}
             <button onClick={() => scrollToSection("infrastructure")} className="hover:text-orange-500">Infrastructure</button>
             <button onClick={() => scrollToSection("call")} className="hover:text-orange-500">Contact</button>
           </nav>
           <Button onClick={() => scrollToSection("contact")} className="bg-orange-500 hover:bg-orange-600 text-white">Get Quote</Button>
         </div>
-      </header>
+      </header> */}
 
       {/* Hero Section with Contact Form */}
       <section className="text-white py-30 px-6 relative overflow-hidden">
@@ -69,7 +69,7 @@ export default function Home() {
             </p>
             <p className="text-xl font-bold md:text-2xl mb-8 text-gray-600 italic">Backed by over 360 projects successfully delivered.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-              <Button size="lg" onClick={() => scrollToSection("call")} className="bg-orange-500 hover:bg-orange-600 text-white font-semibold">
+              <Button size="lg" onClick={() => scrollToSection("call")} className="blink-button bg-orange-500 hover:bg-orange-600 text-white font-semibold">
                 Talk to an Expert
               </Button>
               {/* <Button size="lg" onClick={() => scrollToSection("contact")} className="bg-white text-gray-900 hover:bg-gray-100 font-semibold">
@@ -146,7 +146,7 @@ export default function Home() {
           {industries.map((industry: any) => (
             <div key={industry.name} className="flex flex-col gap-3 items-center">
               <img src={industry.logo}
-                alt={`Client ${industry.name}`} className="h-50 w-full rounded-xl grayscale hover:grayscale-0 hover:scale-[1.1] transition object-cover" />
+                alt={`Client ${industry.name}`} className="h-50 w-full rounded-xl object-cover" />
               <h5>{industry.name}</h5>
             </div>
           ))}
@@ -227,8 +227,8 @@ export default function Home() {
         <div className="mt-12" id="call">
           <h3 className="text-2xl font-bold mb-4">Ready to Prototype Your Next Innovation?</h3>
           <div className="flex justify-center gap-4">
-            <Button onClick={() => scrollToSection("contact")} size="lg" className="bg-orange-500 hover:bg-orange-600">Get Free Quote</Button>
-            <Button size="lg" variant="outline">Call +91 98990 77736</Button>
+            <Button onClick={() => scrollToSection("contact")} size="lg" className="bg-orange-500 blinkOrangeButton">Get Free Quote</Button>
+            <a href="tel:+91 98990 77736" className="lg outline rounded-md py-2 md:px-4 px-2" >Call +91 98990 77736</a>
           </div>
         </div>
       </section>

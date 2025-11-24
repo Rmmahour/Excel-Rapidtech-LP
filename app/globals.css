@@ -130,6 +130,35 @@
   animation: slide-up 0.5s ease-out forwards;
 }
 
+@keyframes blinkPulse {
+  0%, 100% {
+    background-color: #f97316; /* Orange */
+    color: white;
+  }
+  50% {
+    background-color: #fff;
+    color: #f97316;
+    border: 1px solid #f97316;
+  }
+}
+.blink-button {
+  animation: blinkPulse 500ms infinite ease-in-out;
+}
+@keyframes blinkOrangePulse {
+  0%, 100% {
+    background-color: #fff; /* Orange */
+    color: #f97316;
+  }
+  50% {
+    background-color: #f97316;
+    color: #fff;
+    border: 1px solid #f97316;
+  }
+}
+.blinkOrangeButton {
+  animation: blinkOrangePulse 500ms infinite ease-in-out;
+}
+
 
 @layer base {
   * {
