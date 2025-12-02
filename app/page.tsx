@@ -2,11 +2,12 @@
 
 import { ContactForm } from "@/components/form";
 import Header from "@/components/header";
+import { QuoteForm } from "@/components/QuoteForm";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { url } from "inspector";
-import { Clock, Target, ShieldCheck, Wrench, Layers, Zap, Cpu, Package, Car, Factory, FlaskConical, Rocket } from "lucide-react";
+import { Clock, Target, ShieldCheck, Wrench, Layers, Zap, Cpu, Package, Car, Factory, FlaskConical, Rocket, ShieldQuestionMark } from "lucide-react";
 
 export default function Home() {
 
@@ -59,15 +60,15 @@ export default function Home() {
       {/* Hero Section with Contact Form */}
       <section className="text-white py-30 px-6 relative overflow-hidden">
         <div className="absolute -z-1 h-full w-[120vw] left-0 top-0 bg-cover bg-no-repeat" style={{ backgroundImage: `url('/3d-printing-ncr/rapid-banner.png')` }} />
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10">
           <div className="text-center md:text-left">
             <motion.h1 className="text-4xl md:text-6xl font-bold mb-4">
               Your Competitive Edge in Industrial-Grade Prototyping
             </motion.h1>
             <p className="text-lg md:text-xl mb-3">
-              Comprehensive 3D printing and vacuum casting services — including SLS & SLA painting — all securely done at our in-house facility to deliver precision and consistent quality for polymer and rubber parts.
+              Comprehensive 3D printing and vacuum casting services — including SLS & SLA 3D printing — all securely done at our in-house facility to deliver precision and consistent quality for polymer and rubber parts.
             </p>
-            <p className="text-xl font-bold md:text-2xl mb-8 text-gray-600 italic">Backed by over 360 projects successfully delivered.</p>
+            <p className="text-xl font-bold md:text-2xl mb-8 text-gray-600 italic">Backed by over 2200 projects successfully delivered.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <Button size="lg" onClick={() => scrollToSection("call")} className="blink-button bg-orange-500 hover:bg-orange-600 text-white font-semibold">
                 Talk to an Expert
@@ -79,10 +80,17 @@ export default function Home() {
           </div>
 
           {/* Contact Form Inside Hero */}
-          <div className="bg-white text-gray-900 rounded-xl shadow-lg p-8">
-            <h2 className="text-xl font-bold mb-2">Are your 3D printed parts failing to meet your expectations?<br/>Want to improve delivery timelines or quality of parts? </h2>
-            <h3 className="text-md my-4">We help you choose the right materials, technology, and process for flawless results.</h3>
-            <h4 className="text-xl font-bold my-4">Get a Free Consultation</h4>
+          <div className="bg-white text-gray-900 rounded-xl shadow-lg py-8">
+            <ul className="text-xl font-bold mb-2 mx-10 italic p-4 rounded-2xl bg-[#f97316]/50 ">
+              <li className="text-2xl flex gap-3 items-center mb-2">
+                <Rocket width={40} height={30} stroke="red" /> Are your 3D printed parts failing to meet your expectations?
+              </li>
+              <li className="flex gap-3 items-center">
+                <ShieldQuestionMark width={40} height={30} stroke="red"/> Want to improve delivery timelines or quality of parts? 
+              </li>
+            </ul>
+            <h3 className="text-md my-4 mx-10">We help you choose the right materials, technology, and process for flawless results.</h3>
+            <h4 className="text-xl font-bold mx-10 mb-0">Get a Free Consultation</h4>
             <ContactForm />
 
             {/* <form className="grid grid-cols-1 gap-4">
@@ -190,7 +198,7 @@ export default function Home() {
       <section id="contact" className="py-20 px-6 text-center bg-gray-900 text-white">
         <h2 className="text-3xl font-bold mb-6">Request a Quote</h2>
         <div className="bottomForm max-w-3xl mx-auto bg-gray-400 p-4 rounded-xl shadow-lg">
-          <ContactForm  />
+          <QuoteForm  />
         </div>
         
 

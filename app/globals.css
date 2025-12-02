@@ -134,6 +134,7 @@
   0%, 100% {
     background-color: #f97316; /* Orange */
     color: white;
+    border: 1px solid #f97316;
   }
   50% {
     background-color: #fff;
@@ -148,6 +149,7 @@
   0%, 100% {
     background-color: #fff; /* Orange */
     color: #f97316;
+    border: 1px solid #f97316;
   }
   50% {
     background-color: #f97316;
