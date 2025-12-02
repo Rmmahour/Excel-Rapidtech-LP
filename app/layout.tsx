@@ -27,8 +27,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      {/* <head>
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-3LEHRDMCHB" />
+      <head>
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-17723386843" />
+        <Script>
+          {`
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-17723386843');
+  `}
+        </Script>
+        {/* <Script async src="https://www.googletagmanager.com/gtag/js?id=G-3LEHRDMCHB" />
         <Script>
           {`
   window.dataLayer = window.dataLayer || [];
@@ -37,8 +47,8 @@ export default function RootLayout({
 
   gtag('config', 'G-3LEHRDMCHB');
   `}
-        </Script>
-      </head> */}
+        </Script> */}
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
