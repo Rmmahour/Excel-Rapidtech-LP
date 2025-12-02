@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
+import { GoogleTagManager, GoogleAnalytics } from '@next/third-parties/google'
 import CookieConsent from "@/components/CookieConsent";
 
 const geistSans = Geist({
@@ -25,10 +27,28 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      {/* <head>
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-3LEHRDMCHB" />
+        <Script>
+          {`
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3LEHRDMCHB');
+  `}
+        </Script>
+      </head> */}
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        {/* Google Tag Manager (noscript)  */}
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M2NBP8MX"
+          height="0" width="0" style={{ display: 'none', visibility: 'hidden' }}></iframe></noscript>
+        {/* End Google Tag Manager (noscript)  */}
         {children}
+        <GoogleTagManager gtmId="GTM-M2NBP8MX" />
+        <GoogleAnalytics gaId="G-3LEHRDMCHB" />
         <CookieConsent />
       </body>
     </html>
