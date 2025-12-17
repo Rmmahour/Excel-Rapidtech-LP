@@ -81,12 +81,18 @@ export default function Home() {
 
           {/* Contact Form Inside Hero */}
           <div className="bg-white text-gray-900 rounded-xl shadow-lg py-8">
-            <ul className="text-xl font-bold mb-2 mx-10 italic p-4 rounded-2xl bg-[#f97316]/50 ">
-              <li className="text-2xl flex gap-3 items-center mb-2">
-                <Rocket width={40} height={30} stroke="red" /> Are your 3D printed parts failing to meet your expectations?
+            <ul className="sm:text-xl text-sm font-bold mb-2 mx-10 italic p-4 rounded-2xl bg-[#f97316]/50 gap-2">
+              <li className="sm:text-2xl text-md flex gap-3 items-start mb-2 leading-snug">
+                <Rocket className="w-6 h-6 text-red-500 mt-1 flex-shrink-0" />
+                <p>
+                  Are your 3D printed parts failing to meet your expectations?
+                </p>
               </li>
-              <li className="flex gap-3 items-center">
-                <ShieldQuestionMark width={40} height={30} stroke="red"/> Want to improve delivery timelines or quality of parts? 
+              <li className="sm:text-xl text-sm flex gap-3 items-start mb-2 leading-snug">
+                <ShieldQuestionMark className="w-6 h-6 text-red-500 mt-1 flex-shrink-0" />
+                <p>
+                  Want to improve delivery timelines or quality of parts?
+                </p>
               </li>
             </ul>
             <h3 className="text-md my-4 mx-10">We help you choose the right materials, technology, and process for flawless results.</h3>
@@ -198,9 +204,9 @@ export default function Home() {
       <section id="contact" className="py-20 px-6 text-center bg-gray-900 text-white">
         <h2 className="text-3xl font-bold mb-6">Request a Quote</h2>
         <div className="bottomForm max-w-3xl mx-auto bg-gray-400 p-4 rounded-xl shadow-lg">
-          <QuoteForm  />
+          <QuoteForm />
         </div>
-        
+
 
         {/* <form className="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 bg-gray-800 p-8 rounded-xl shadow-lg">
           <input type="text" placeholder="Name" className="p-3 rounded-md bg-gray-700 text-white border border-gray-600" />
