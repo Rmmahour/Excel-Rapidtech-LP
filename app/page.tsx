@@ -81,7 +81,7 @@ export default function Home() {
 
           {/* Contact Form Inside Hero */}
           <div className="bg-white text-gray-900 rounded-xl shadow-lg py-8">
-            <ul className="sm:text-xl text-sm font-bold mb-2 mx-10 italic p-4 rounded-2xl bg-[#f97316]/50 gap-2">
+            <ul className="font-bold mb-2 mx-10 p-4 rounded-2xl bg-[#f97316]/50 gap-2">
               <li className="sm:text-2xl text-md flex gap-3 items-start mb-2 leading-snug">
                 <Rocket className="w-6 h-6 text-red-500 mt-1 flex-shrink-0" />
                 <p>
